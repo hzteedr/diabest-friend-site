@@ -81,7 +81,13 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-headi
 body { margin: 0; font-size: 15px; line-height: 1.55; font-weight: 400; }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading); font-weight: var(--font-heading-weight);
-  line-height: 1.12; letter-spacing: -0.015em; margin: 0 0 var(--space-2);
+  line-height: 1.12; letter-spacing: normal; margin: 0 0 var(--space-2);
+}
+/* Inline styles on individual pages still carry the old display-face
+   tracking (-0.028em) tuned for Caprasimo; it reads dense/heavy on a
+   plain system sans-serif, so force it back to normal everywhere. */
+h1, h2, h3, h4, h5, h6, .nav-brand, .card-title {
+  letter-spacing: normal !important;
 }
 h1 { font-size: 42px; }
 h2 { font-size: 32px; }
