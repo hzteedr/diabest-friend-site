@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Diabest Friend</title>
-<meta name="description" content="Aplikasi meal & lab tracker ramah diabetes — segera hadir. Plus ebook 'Bukan Sekedar Pantang Manis'.">
+<meta name="description" content="Aplikasi meal planner ramah diabetes: resep sehat, kontrol porsi & kalori, pemantauan gula darah dan berat badan. Segera hadir.">
 <style>
   :root {
     color-scheme: light dark;
@@ -15,6 +15,10 @@
     --accent: #B8863C;
     --card: #FFFFFF;
     --border: #E4DFD2;
+    --stat1: #FBEAE3;
+    --stat2: #E3EBD9;
+    --stat3: #FBDCCB;
+    --stat4: #E8F1DE;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -25,6 +29,10 @@
       --accent: #D8A85C;
       --card: #1C2220;
       --border: #2C332B;
+      --stat1: #2A1E1A;
+      --stat2: #1E241A;
+      --stat3: #2A1F16;
+      --stat4: #1C231A;
     }
   }
   * { box-sizing: border-box; }
@@ -35,77 +43,62 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
   }
-  .wrap { max-width: 640px; margin: 0 auto; padding: 48px 20px 96px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 96px; }
+  p { text-align: justify; text-justify: inter-word; }
+
+  /* Header */
+  header.site {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 44px;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+  .brand img { width: 34px; height: 34px; border-radius: 9px; }
+  .brand span { font-weight: 700; font-size: 1.05rem; }
+  .nav-link { color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+  .nav-link:hover { color: var(--primary); }
 
   /* Hero */
-  .hero { text-align: center; margin-bottom: 56px; }
-  img.logo {
-    width: 88px;
-    height: 88px;
-    border-radius: 20px;
-    border: 1px solid var(--border);
-    margin-bottom: 18px;
-  }
-  h1 { font-size: 1.7rem; margin: 0 0 4px; color: var(--primary); }
+  .hero { margin-bottom: 40px; }
   .pill {
     display: inline-block;
     font-size: 0.72rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 14%, transparent);
-    border-radius: 999px;
-    padding: 4px 12px;
-    margin-bottom: 14px;
-    font-weight: 600;
-  }
-  .pill.soon {
     color: var(--primary);
     background: color-mix(in srgb, var(--primary) 14%, transparent);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 16px;
+    font-weight: 600;
   }
-  p.tagline { color: var(--muted); margin: 0; }
-
-  /* Sections / cards */
-  section { margin-bottom: 28px; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px 24px 26px;
-  }
-  .card h2 {
-    margin: 0 0 6px;
-    font-size: 1.15rem;
+  h1 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin: 0 0 16px;
     color: var(--text);
   }
-  .card p.desc {
+  .hero p.lead {
     color: var(--muted);
-    margin: 0 0 16px;
-    text-align: justify;
-    text-justify: inter-word;
+    max-width: 56ch;
+    margin: 0 0 24px;
+    font-size: 1.02rem;
   }
 
-  ul.features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px;
-    display: grid;
-    gap: 8px;
+  /* Waitlist form */
+  .waitlist { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+  .waitlist input[type=email] {
+    flex: 1 1 240px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font-size: 0.95rem;
   }
-  ul.features li {
-    color: var(--muted);
-    font-size: 0.92rem;
-    padding-left: 22px;
-    position: relative;
-  }
-  ul.features li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--primary);
-    font-weight: 700;
-  }
-
   .btn {
     display: inline-block;
     background: var(--primary);
@@ -113,9 +106,12 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 0.92rem;
-    padding: 11px 20px;
+    padding: 12px 22px;
     border-radius: 10px;
+    border: none;
+    cursor: pointer;
     transition: opacity 0.15s ease;
+    white-space: nowrap;
   }
   .btn:hover { opacity: 0.88; }
   .btn.ghost {
@@ -123,23 +119,77 @@
     color: var(--primary);
     border: 1px solid var(--primary);
   }
-
-  /* Ebook card specifics */
-  .ebook-title {
+  .waitlist-note { color: var(--muted); font-size: 0.82rem; margin: 0 0 8px; }
+  .quote {
     font-style: italic;
-    color: var(--primary);
-  }
-  p.byline {
-    margin: 0 0 12px;
-    font-size: 0.82rem;
     color: var(--muted);
+    margin: 20px 0 0;
+    font-size: 0.98rem;
   }
+
+  /* Stats */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin: 40px 0;
+  }
+  .stat {
+    border-radius: 16px;
+    padding: 18px 14px;
+    text-align: center;
+  }
+  .stat:nth-child(1) { background: var(--stat1); }
+  .stat:nth-child(2) { background: var(--stat2); }
+  .stat:nth-child(3) { background: var(--stat3); }
+  .stat:nth-child(4) { background: var(--stat4); }
+  .stat .num { font-weight: 700; font-size: 1.25rem; color: var(--accent); display: block; margin-bottom: 4px; }
+  .stat .label { font-size: 0.72rem; letter-spacing: 0.02em; color: var(--muted); line-height: 1.35; }
+  @media (max-width: 560px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Feature cards */
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 14px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+  @media (max-width: 560px) {
+    .features { grid-template-columns: 1fr; }
+  }
+  .feature-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px 20px 22px;
+  }
+  .feature-card .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  .feature-card h3 { margin: 0 0 8px; font-size: 1.05rem; color: var(--text); }
+  .feature-card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
 
   /* Links list (legal/support) */
   .links {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 40px;
   }
   a.linkcard {
     display: block;
@@ -163,50 +213,90 @@
 <body>
   <div class="wrap">
 
+    <header class="site">
+      <a class="brand" href="./index.html">
+        <img src="./icon.png" alt="Diabest Friend logo">
+        <span>Diabest Friend</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:20px">
+        <a class="nav-link" href="./artikel.html">Artikel</a>
+        <a class="nav-link" href="./about.html">Tentang</a>
+      </div>
+    </header>
+
     <div class="hero">
-      <img class="logo" src="./icon.png" alt="Diabest Friend logo">
-      <h1>Diabest Friend</h1>
-      <div class="pill">Meal App</div>
-      <p class="tagline">Eat healthy, control your sugar, live better.<br>Makan sehat, gula terkendali, hidup lebih berkualitas.</p>
+      <span class="pill">Segera Hadir</span>
+      <h1>Makan sehat, gula terkendali, hidup lebih berkualitas.</h1>
+      <p class="lead">Diabest Friend adalah aplikasi meal planner untuk Anda yang hidup dengan diabetes atau prediabetes: resep sehat, kontrol porsi dan kalori, pemantauan gula darah, dan berat badan, dalam satu tempat, dengan bahasa yang mudah dipahami.</p>
+
+      <form class="waitlist" action="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener" onsubmit="window.open('https://forms.gle/z2fcQjtk7pXNAMps7','_blank'); return false;">
+        <a class="btn" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener">Gabung waitlist</a>
+      </form>
+      <p class="waitlist-note">Kami kabari saat rilis. Tanpa spam, bisa berhenti kapan saja.</p>
+
+      <p class="quote">"Teman terbaikmu untuk hidup sehat setiap hari."</p>
     </div>
 
-    <section>
-      <div class="card">
-        <span class="pill soon">Segera Hadir</span>
-        <h2>Aplikasi Diabest Friend</h2>
-        <p class="desc">Teman harian untuk perencanaan makan yang ramah diabetes — sedang dalam pengembangan.</p>
-        <ul class="features">
-          <li>Catatan makan pribadi & info nutrisi umum</li>
-          <li>Resep sehat ramah diabetes</li>
-          <li>Rentang referensi hasil lab</li>
-          <li>Pemantauan berat badan & estimasi klirens kreatinin</li>
-        </ul>
-        <a class="btn" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener">Kabari saya saat rilis</a>
+    <div class="stats">
+      <div class="stat">
+        <span class="num">1 dari 10</span>
+        <span class="label">ORANG DEWASA HIDUP DENGAN DIABETES</span>
       </div>
-    </section>
+      <div class="stat">
+        <span class="num">50 g</span>
+        <span class="label">BATAS GULA HARIAN, ± 4 SDM</span>
+      </div>
+      <div class="stat">
+        <span class="num">150 menit</span>
+        <span class="label">AKTIVITAS FISIK PER MINGGU</span>
+      </div>
+      <div class="stat">
+        <span class="num">25–30 g</span>
+        <span class="label">SERAT YANG DIANJURKAN SEHARI</span>
+      </div>
+    </div>
 
-    <section>
-      <div class="card">
-        <span class="pill soon">Segera Hadir</span>
-        <h2>Ebook: <span class="ebook-title">"Bukan Sekedar Pantang Manis"</span></h2>
-        <p class="byline">oleh Tara Sejiwa</p>
-        <p class="desc">Panduan mengelola gula darah yang bukan cuma soal piring makan — dengan otot sebagai pusat cerita. Hitung kebutuhan kalori & protein Anda sendiri, susun menu ala Indonesia, dan jalankan program latihan otot 3x seminggu di rumah.</p>
-        <ul class="features">
-          <li>36 bab + 30 resep rendah gula khas Indonesia</li>
-          <li>Program latihan otot di rumah, tanpa gym</li>
-          <li>3 template bonus: menu harian, pantau gula darah, progres latihan</li>
-        </ul>
-        <a class="btn ghost" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener">Kabari saya saat rilis</a>
+    <p class="section-label">Di Dalam Aplikasi</p>
+    <div class="features">
+      <div class="feature-card">
+        <p class="eyebrow">Resep Sehat</p>
+        <h3>Menu yang bisa dibeli di pasar</h3>
+        <p>Resep rumahan dengan bahan lokal, disusun mengikuti prinsip Isi Piringku: setengah sayur dan buah, seperempat protein, seperempat karbohidrat.</p>
       </div>
-    </section>
+      <div class="feature-card">
+        <p class="eyebrow">Kontrol Porsi &amp; Kalori</p>
+        <h3>Ukur porsi tanpa timbangan</h3>
+        <p>Panduan visual: satu centong, satu potong, satu gelas. Lalu aplikasi menghitung perkiraan kalori dan karbohidratnya untuk Anda.</p>
+      </div>
+      <div class="feature-card">
+        <p class="eyebrow">Pantau Gula Darah</p>
+        <h3>Grafik yang bisa ditunjukkan ke dokter</h3>
+        <p>Catat hasil gula darah puasa dan setelah makan, lihat polanya per minggu, lalu bawa ringkasannya saat kontrol berikutnya.</p>
+      </div>
+      <div class="feature-card">
+        <p class="eyebrow">Kontrol Berat Badan</p>
+        <h3>Target yang masuk akal, bukan drastis</h3>
+        <p>Pantau berat dan lingkar perut dengan target bertahap. Penurunan 5–10% berat badan sudah terbukti memperbaiki kendali gula darah.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px">
+      <p class="section-label" style="margin:0">Artikel Pilihan</p>
+      <a href="./artikel.html" style="font-size:0.85rem;color:var(--primary);text-decoration:none;font-weight:600">Lihat semua artikel →</a>
+    </div>
+    <div class="links" style="margin-bottom:16px">
+      <a class="linkcard" href="./artikel-indeks-glikemik.html">Indeks glikemik: cara memilih karbohidrat<span>Bukan soal menghindari nasi, tapi memilih bentuk, porsi, dan pasangannya di piring. · 7 menit baca</span></a>
+      <a class="linkcard" href="./artikel-isi-piringku.html">Isi Piringku untuk yang hidup dengan diabetes<span>Setengah piring sayur dan buah, seperempat protein, seperempat karbohidrat. · 6 menit baca</span></a>
+      <a class="linkcard" href="./artikel-label-gizi.html">Membaca label gizi: gula yang bersembunyi<span>Cek takaran saji lebih dulu, lalu total gula. · 5 menit baca</span></a>
+    </div>
 
     <div class="links">
-      <a class="linkcard" href="./privacy.html">Privacy Policy<span>How your data is handled — spoiler: it never leaves your device</span></a>
-      <a class="linkcard" href="./terms.html">Terms & Disclaimer<span>Medical disclaimer and terms of use</span></a>
-      <a class="linkcard" href="mailto:support@diabestfriend.com">Support / Contact<span>support@diabestfriend.com</span></a>
+      <a class="linkcard" href="./privacy.html">Kebijakan Privasi<span>Data Anda tidak pernah meninggalkan perangkat Anda</span></a>
+      <a class="linkcard" href="./terms.html">Ketentuan &amp; Disclaimer Medis<span>Syarat penggunaan dan disclaimer medis</span></a>
+      <a class="linkcard" href="mailto:support@diabestfriend.com">Bantuan / Kontak<span>support@diabestfriend.com</span></a>
     </div>
 
-    <footer>© 2026 diabestfriend.com</footer>
+    <footer>© 2026 Diabest Friend. Informasi di situs dan aplikasi ini bersifat edukatif dan bukan pengganti nasihat medis profesional.</footer>
   </div>
 </body>
 </html>
