@@ -21,7 +21,7 @@
     <img src="./icon.png" alt="" style="width:30px;height:30px;border-radius:9px;display:block" />
     Diabest Friend
   </a>
-  <div style="display:flex;align-items:center;gap:clamp(12px,1.8vw,24px);margin-left:auto">
+  <div style="display:flex;align-items:center;gap:clamp(12px,1.8vw,24px);margin-left:auto;flex-wrap:wrap;justify-content:flex-end">
     <a href="./artikel.html">Artikel</a>
     <a href="./about.html" aria-current="page">Tentang</a>
     <a class="btn btn-primary" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener" style="white-space:nowrap">Gabung waitlist</a>
@@ -30,7 +30,7 @@
 
 <main class="container" style="padding-block:clamp(36px,5vw,72px) clamp(50px,7vw,90px)">
   <span style="display:block;font-size:13px;line-height:1.4;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin-bottom:18px">Tentang kami</span>
-  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,300px);gap:clamp(28px,5vw,64px);align-items:start">
+  <div class="grid-about">
     <div>
       <h1 style="font-size:clamp(32px,4vw,50px);line-height:1.12;letter-spacing:-0.028em;margin:0;max-width:22ch">Dibuat karena satu pertanyaan di ruang tunggu.</h1>
       <p class="justify" style="font-size:17.5px;line-height:1.7;max-width:58ch;margin:28px 0 0;color:var(--color-text)">&ldquo;Jadi besok saya makan apa?&rdquo; Pertanyaan itu terdengar sederhana, tapi jawabannya jarang tersedia dalam bentuk yang bisa langsung dipakai. Bukan tabel kalori, bukan larangan, melainkan menu yang benar-benar bisa dimasak di rumah.</p>
@@ -72,7 +72,7 @@
       <p class="justify" style="font-size:17px;line-height:1.7;max-width:58ch;margin:18px 0 0;color:color-mix(in srgb, var(--color-text) 86%, transparent)">Setiap artikel disusun dari panduan kesehatan yang berlaku, lalu ditinjau tenaga kesehatan sebelum tayang. Tanggal tinjauan dicantumkan di bawah judul, dan artikel yang sudah lama dijadwalkan untuk diperiksa ulang. Jika Anda menemukan yang keliru, tulis ke kami, koreksi akan kami cantumkan.</p>
     </div>
 
-    <aside style="display:grid;gap:20px;position:sticky;top:96px">
+    <aside class="grid-side-aside">
       <figure class="washed" style="margin:0;border-radius:calc(1.5 * var(--radius-lg));overflow:hidden;box-shadow:var(--shadow-md)">
         <img src="./app-id.jpg" alt="Tampilan aplikasi Diabest Friend" style="display:block;width:100%;height:auto" />
       </figure>
