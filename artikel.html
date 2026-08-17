@@ -5,95 +5,117 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Semua Artikel · Diabest Friend</title>
 <meta name="description" content="Bacaan singkat soal gizi, nutrisi, dan hidup dengan diabetes. Setiap artikel ditinjau tenaga kesehatan.">
+<link rel="stylesheet" href="./styles.css">
 <style>
-  :root {
-    color-scheme: light dark;
-    --bg: #F8F6F0; --text: #1F2A22; --muted: #55604F; --primary: #2E6B47;
-    --accent: #B8863C; --card: #FFFFFF; --border: #E4DFD2;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14181A; --text: #EDEFE9; --muted: #A9B3A4; --primary: #6FBF8E;
-      --accent: #D8A85C; --card: #1C2220; --border: #2C332B;
-    }
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 96px; }
-  p { text-align: justify; text-justify: inter-word; }
-  .backlink { display: inline-block; margin-bottom: 24px; font-size: 0.9rem; color: var(--primary); text-decoration: none; }
-  .backlink:hover { text-decoration: underline; }
-  .pill { display: inline-block; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); border-radius: 999px; padding: 4px 12px; margin-bottom: 14px; font-weight: 600; }
-  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 12px; color: var(--text); }
-  .lead { color: var(--muted); font-size: 1rem; margin: 0 0 36px; max-width: 56ch; }
-  .list { display: grid; gap: 12px; }
-  a.artcard {
-    display: block;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 18px 20px;
-    color: var(--text);
-    text-decoration: none;
-    transition: border-color 0.15s ease;
-  }
-  a.artcard:hover { border-color: var(--primary); }
-  a.artcard .cat { display: block; font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
-  a.artcard .title { display: block; font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
-  a.artcard .desc { display: block; color: var(--muted); font-size: 0.9rem; margin-bottom: 6px; }
-  a.artcard .meta { display: block; color: var(--muted); font-size: 0.78rem; }
-  footer { margin-top: 48px; font-size: 0.85rem; color: var(--muted); text-align: center; }
-  footer a { color: var(--muted); }
+  a { color: var(--color-accent-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-800); }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  .container { max-width: 1160px; margin: 0 auto; padding-inline: clamp(20px, 5vw, 64px); }
+  p.justify { text-align: justify; text-justify: inter-word; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <a class="backlink" href="./index.html">← Diabest Friend</a>
 
-  <span class="pill">Perpustakaan</span>
-  <h1>Gizi, nutrisi, dan hidup dengan diabetes.</h1>
-  <p class="lead">Bacaan singkat yang bisa langsung dipakai besok pagi. Setiap artikel ditinjau tenaga kesehatan dan mencantumkan tanggal tinjauannya.</p>
+<nav class="nav" style="padding-inline:max(clamp(20px,5vw,64px), calc((100% - 1160px) / 2 + clamp(20px,5vw,64px)));position:sticky;top:0;z-index:20;background:var(--color-bg)">
+  <a href="./index.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+    <img src="./icon.png" alt="" style="width:30px;height:30px;border-radius:9px;display:block" />
+    Diabest Friend
+  </a>
+  <div style="display:flex;align-items:center;gap:clamp(12px,1.8vw,24px);margin-left:auto">
+    <a href="./artikel.html" aria-current="page">Artikel</a>
+    <a href="./about.html">Tentang</a>
+    <a class="btn btn-primary" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener" style="white-space:nowrap">Gabung waitlist</a>
+  </div>
+</nav>
 
-  <div class="list">
-    <a class="artcard" href="./artikel-indeks-glikemik.html">
-      <span class="cat">Gizi</span>
-      <span class="title">Indeks glikemik: cara memilih karbohidrat</span>
-      <span class="desc">Bukan soal menghindari nasi, tapi memilih bentuk, porsi, dan pasangannya di piring.</span>
-      <span class="meta">7 menit baca · Ditinjau 12 Juni 2026</span>
-    </a>
-    <a class="artcard" href="./artikel-isi-piringku.html">
-      <span class="cat">Nutrisi</span>
-      <span class="title">Isi Piringku untuk yang hidup dengan diabetes</span>
-      <span class="desc">Setengah piring sayur dan buah, seperempat protein, seperempat karbohidrat. Cara menerapkannya pada menu rumahan.</span>
-      <span class="meta">6 menit baca · Ditinjau 3 Juni 2026</span>
-    </a>
-    <a class="artcard" href="./artikel-label-gizi.html">
-      <span class="cat">Nutrisi</span>
-      <span class="title">Membaca label gizi: gula yang bersembunyi</span>
-      <span class="desc">Cek takaran saji lebih dulu, lalu total gula. Nama lain gula ada belasan, ini daftarnya.</span>
-      <span class="meta">5 menit baca · Ditinjau 28 Mei 2026</span>
-    </a>
-    <a class="artcard" href="./artikel-hba1c.html">
-      <span class="cat">Diabetes</span>
-      <span class="title">HbA1c dan gula darah puasa, apa bedanya</span>
-      <span class="desc">Satu angka merangkum tiga bulan terakhir, satu angka merekam pagi ini. Kapan masing-masing dipakai.</span>
-      <span class="meta">6 menit baca · Ditinjau 21 Mei 2026</span>
-    </a>
-    <a class="artcard" href="./artikel-makan-di-luar.html">
-      <span class="cat">Gaya Hidup</span>
-      <span class="title">Makan di luar tanpa merusak rencana</span>
-      <span class="desc">Warung, kondangan, rapat kantor. Tiga situasi, tiga strategi sederhana yang tidak bikin Anda terlihat aneh.</span>
-      <span class="meta">5 menit baca · Ditinjau 14 Mei 2026</span>
-    </a>
-    <a class="artcard" href="./artikel-serat.html">
-      <span class="cat">Gizi</span>
-      <span class="title">Serat: 25–30 gram sehari, dari mana saja</span>
-      <span class="desc">Serat memperlambat penyerapan gula. Sumber termurahnya ada di pasar, bukan di apotek.</span>
-      <span class="meta">4 menit baca · Ditinjau 6 Mei 2026</span>
-    </a>
+<main class="container" style="padding-block:clamp(36px,5vw,72px) clamp(50px,7vw,90px)">
+  <span style="display:block;font-size:13px;line-height:1.4;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin-bottom:18px">Perpustakaan</span>
+  <h1 style="font-size:clamp(34px,4.4vw,54px);line-height:1.1;letter-spacing:-0.028em;margin:0">
+    <span style="display:block">Gizi, nutrisi,</span>
+    <span style="display:block">dan hidup dengan diabetes.</span>
+  </h1>
+  <p class="justify" style="font-size:17px;line-height:1.65;max-width:56ch;margin:24px 0 0;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Bacaan singkat yang bisa langsung dipakai besok pagi. Setiap artikel ditinjau tenaga kesehatan dan mencantumkan tanggal tinjauannya.</p>
+
+  <div style="display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 40px">
+    <span class="tag tag-accent">Semua</span>
+    <span class="tag tag-outline">Gizi</span>
+    <span class="tag tag-outline">Nutrisi</span>
+    <span class="tag tag-outline">Diabetes</span>
+    <span class="tag tag-outline">Gaya hidup</span>
   </div>
 
-  <footer>© 2026 Diabest Friend. Informasi di situs dan aplikasi ini bersifat edukatif dan bukan pengganti nasihat medis profesional.</footer>
-</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:clamp(20px,3vw,32px)">
+    <a class="card elev-sm" href="./artikel-indeks-glikemik.html" style="text-decoration:none;color:inherit">
+      <p class="card-kicker">Gizi</p>
+      <h2 class="card-title">Indeks glikemik: cara memilih karbohidrat</h2>
+      <p class="card-body">IG rendah, sedang, tinggi: angkanya membantu, tapi porsi dan pasangan di piring lebih menentukan.</p>
+      <p class="card-meta">7 menit baca · Ditinjau 12 Jun 2026</p>
+    </a>
+    <a class="card elev-sm" href="./artikel-isi-piringku.html" style="text-decoration:none;color:inherit">
+      <p class="card-kicker">Nutrisi</p>
+      <h2 class="card-title">Isi Piringku untuk yang hidup dengan diabetes</h2>
+      <p class="card-body">Setengah piring sayur dan buah, seperempat protein, seperempat karbohidrat. Cara menerapkannya pada menu rumahan.</p>
+      <p class="card-meta">6 menit baca · Ditinjau 3 Jun 2026</p>
+    </a>
+    <a class="card elev-sm" href="./artikel-label-gizi.html" style="text-decoration:none;color:inherit">
+      <p class="card-kicker">Nutrisi</p>
+      <h2 class="card-title">Membaca label gizi: gula yang bersembunyi</h2>
+      <p class="card-body">Cek takaran saji lebih dulu, lalu total gula. Nama lain gula ada belasan, ini daftarnya.</p>
+      <p class="card-meta">5 menit baca · Ditinjau 28 Mei 2026</p>
+    </a>
+    <a class="card elev-sm" href="./artikel-hba1c.html" style="text-decoration:none;color:inherit">
+      <p class="card-kicker">Diabetes</p>
+      <h2 class="card-title">HbA1c dan gula darah puasa, apa bedanya</h2>
+      <p class="card-body">Satu angka merangkum tiga bulan, satu angka merekam pagi ini. Kapan masing-masing dipakai.</p>
+      <p class="card-meta">6 menit baca · Ditinjau 21 Mei 2026</p>
+    </a>
+    <a class="card elev-sm" href="./artikel-makan-di-luar.html" style="text-decoration:none;color:inherit">
+      <p class="card-kicker">Gaya hidup</p>
+      <h2 class="card-title">Makan di luar tanpa merusak rencana</h2>
+      <p class="card-body">Warung, kondangan, rapat kantor. Tiga situasi, tiga strategi sederhana yang tidak bikin Anda terlihat aneh.</p>
+      <p class="card-meta">5 menit baca · Ditinjau 14 Mei 2026</p>
+    </a>
+    <a class="card elev-sm" href="./artikel-serat.html" style="text-decoration:none;color:inherit">
+      <p class="card-kicker">Gizi</p>
+      <h2 class="card-title">Serat: 25–30 gram sehari, dari mana saja</h2>
+      <p class="card-body">Serat memperlambat penyerapan gula. Sumber termurahnya ada di pasar, bukan di apotek.</p>
+      <p class="card-meta">4 menit baca · Ditinjau 6 Mei 2026</p>
+    </a>
+  </div>
+</main>
+
+<footer style="border-top:1px solid var(--color-divider);margin-top:20px">
+  <div class="container" style="padding-block:clamp(34px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px">
+    <div>
+      <span style="display:flex;align-items:center;gap:10px;font-family:var(--font-heading);font-weight:400;font-size:20px">
+        <img src="./icon.png" alt="" style="width:26px;height:26px;border-radius:8px;display:block" />
+        Diabest Friend
+      </span>
+      <p style="font-size:14.5px;line-height:1.6;margin:14px 0 0;max-width:34ch;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Meal apps untuk siapa saja yang ingin makan lebih sehat, termasuk penyandang diabetes dan prediabetes, beserta keluarga yang mendampingi.</p>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Konten</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="./artikel.html">Semua artikel</a>
+        <a href="./about.html">Tentang kami</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Ketentuan</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="./terms.html">Disclaimer medis</a>
+        <a href="./privacy.html">Kebijakan privasi</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Bantuan</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="mailto:support@diabestfriend.com">support@diabestfriend.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="padding-bottom:32px;font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent)">© 2026 Diabest Friend. Informasi di situs dan aplikasi ini bersifat edukatif dan bukan pengganti nasihat medis profesional.</div>
+</footer>
+
 </body>
 </html>

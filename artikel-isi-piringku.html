@@ -5,108 +5,123 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Isi Piringku untuk yang Hidup dengan Diabetes · Diabest Friend</title>
 <meta name="description" content="Setengah piring sayur dan buah, seperempat protein, seperempat karbohidrat. Cara menerapkannya pada menu rumahan Indonesia.">
+<link rel="stylesheet" href="./styles.css">
 <style>
-  :root {
-    color-scheme: light dark;
-    --bg: #F8F6F0; --text: #1F2A22; --muted: #55604F; --primary: #2E6B47;
-    --accent: #B8863C; --card: #FFFFFF; --border: #E4DFD2;
-    --warn-bg: #FBEAE3; --warn-text: #7A3B1E;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14181A; --text: #EDEFE9; --muted: #A9B3A4; --primary: #6FBF8E;
-      --accent: #D8A85C; --card: #1C2220; --border: #2C332B;
-      --warn-bg: #2A1E1A; --warn-text: #E7B79A;
-    }
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 96px; }
-  p, li { text-align: justify; text-justify: inter-word; }
-  .backlink { display: inline-block; margin-bottom: 24px; font-size: 0.9rem; color: var(--primary); text-decoration: none; }
-  .backlink:hover { text-decoration: underline; }
-  .pill { display: inline-block; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); border-radius: 999px; padding: 4px 12px; margin-bottom: 14px; font-weight: 600; }
-  h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 10px; color: var(--text); }
-  .meta { color: var(--muted); font-size: 0.85rem; margin: 0 0 30px; }
-  h2 { font-size: 1.2rem; margin: 34px 0 10px; color: var(--primary); }
-  p { color: var(--text); font-size: 0.98rem; margin: 14px 0; }
-  ul, ol { padding-left: 22px; margin: 12px 0; }
-  li { color: var(--text); font-size: 0.98rem; margin: 8px 0; }
-  li strong, p strong { color: var(--text); }
-  .callout { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: 10px; padding: 14px 18px; margin: 20px 0; font-size: 0.95rem; }
-  .callout p { text-align: left; margin: 0; }
-  .callout .lead { font-weight: 700; margin-bottom: 6px; }
-  .medical-note { background: var(--warn-bg); color: var(--warn-text); border-radius: 14px; padding: 20px 22px; margin-top: 40px; font-size: 0.9rem; }
-  .medical-note p { text-align: left; color: var(--warn-text); margin: 6px 0 0; }
-  .medical-note .label { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; margin: 0; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px 26px; margin-top: 32px; }
-  .btn { display: inline-block; background: var(--primary); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.92rem; padding: 11px 20px; border-radius: 10px; margin-top: 10px; }
-  .btn:hover { opacity: 0.88; }
-  .related { margin-top: 40px; }
-  .related p.label { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 0 0 12px; }
-  .related a { display: block; color: var(--text); font-weight: 600; font-size: 0.95rem; text-decoration: none; margin: 8px 0; }
-  .related a:hover { color: var(--primary); }
-  footer { margin-top: 48px; font-size: 0.85rem; color: var(--muted); text-align: center; }
-  footer a { color: var(--muted); }
+  a { color: var(--color-accent-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-800); }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  .container { max-width: 1160px; margin: 0 auto; padding-inline: clamp(20px, 5vw, 64px); }
+  .body-copy p, .body-copy li { text-align: justify; text-justify: inter-word; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <a class="backlink" href="./index.html">← Diabest Friend</a>
 
-  <span class="pill">Nutrisi</span>
-  <h1>Isi Piringku untuk yang hidup dengan diabetes</h1>
-  <p class="meta">6 menit baca · Ditinjau 3 Juni 2026 oleh tim gizi Diabest Friend</p>
-
-  <p>Menghitung kalori setiap kali makan melelahkan, dan hampir tidak ada yang sanggup melakukannya seumur hidup. Untungnya ada cara yang lebih sederhana dan hampir sama efektifnya: mengatur proporsi piring, bukan angkanya.</p>
-
-  <h2>Pembagian piringnya</h2>
-  <p>Panduan Isi Piringku dari Kementerian Kesehatan membagi satu piring makan seperti ini:</p>
-  <ul>
-    <li><strong>Setengah piring, sayur dan buah.</strong> Dua bagian sayur, satu bagian buah. Sayurnya diutamakan yang tidak bertepung: bayam, kangkung, buncis, sawi, terong, labu siam.</li>
-    <li><strong>Seperempat piring, lauk protein.</strong> Ikan, ayam tanpa kulit, telur, tempe, tahu, atau kacang-kacangan. Selingkan protein hewani dan nabati dalam sehari.</li>
-    <li><strong>Seperempat piring, karbohidrat.</strong> Nasi, kentang, jagung, ubi, atau sagu. Perhatikan: seperempat, bukan setengah. Ini bagian yang paling sering kebablasan.</li>
-  </ul>
-  <p>Lengkapi dengan air putih (sekitar 8 gelas sehari), aktivitas fisik 30 menit, dan menimbang berat badan secara berkala.</p>
-
-  <div class="callout">
-    <p class="lead">Yang berubah untuk diabetes: urutan dan porsi karbohidratnya.</p>
-    <p>Prinsip piringnya sama untuk semua orang. Tiga penyesuaian kecil membuatnya bekerja lebih baik untuk gula darah: karbohidrat tetap di seperempat piring, buah dimakan utuh (bukan dijus), dan sayur atau protein disantap lebih dulu sebelum nasi.</p>
+<nav class="nav" style="padding-inline:max(clamp(20px,5vw,64px), calc((100% - 1160px) / 2 + clamp(20px,5vw,64px)));position:sticky;top:0;z-index:20;background:var(--color-bg)">
+  <a href="./index.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+    <img src="./icon.png" alt="" style="width:30px;height:30px;border-radius:9px;display:block" />
+    Diabest Friend
+  </a>
+  <div style="display:flex;align-items:center;gap:clamp(12px,1.8vw,24px);margin-left:auto">
+    <a href="./artikel.html" aria-current="page">Artikel</a>
+    <a href="./about.html">Tentang</a>
+    <a class="btn btn-primary" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener" style="white-space:nowrap">Gabung waitlist</a>
   </div>
+</nav>
 
-  <h2>Menerjemahkannya ke piring sungguhan</h2>
-  <p>Masalahnya, makanan Indonesia jarang tersaji terpisah-pisah di satu piring datar. Beberapa penyesuaian praktis:</p>
-  <ol>
-    <li><strong>Nasi satu centong, bukan sesuai selera.</strong> Satu centong munjung setara sekitar dua takaran. Ambil satu, lalu tambah sayur sampai piring terlihat penuh.</li>
-    <li><strong>Untuk makanan berkuah, hitung isinya.</strong> Soto, bakso, atau gado-gado: perkirakan berapa banyak lontong, bihun, atau ketupatnya, itulah bagian karbohidrat Anda.</li>
-    <li><strong>Mi dan nasi tidak berpasangan.</strong> Keduanya karbohidrat. Pilih satu, dan sisanya diisi lauk serta sayur.</li>
-    <li><strong>Gorengan bukan lauk protein.</strong> Tempe goreng masih tempe, tapi bakwan dan risoles lebih dekat ke karbohidrat plus minyak.</li>
-    <li><strong>Buah sebagai penutup, satu porsi.</strong> Satu potong pepaya sedang, satu buah jeruk, atau satu pisang kecil, bukan sepiring rujak.</li>
-  </ol>
+<main class="container" style="padding-block:clamp(30px,4vw,56px) clamp(50px,7vw,90px)">
+  <a class="btn btn-ghost" href="./artikel.html" style="margin-bottom:34px;display:inline-flex">← Semua artikel</a>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,280px);gap:clamp(28px,5vw,64px);align-items:start">
+    <article class="body-copy">
+      <span class="tag tag-accent-2" style="margin-bottom:20px;display:inline-block">Nutrisi</span>
+      <h1 style="font-size:clamp(30px,3.8vw,46px);line-height:1.12;letter-spacing:-0.028em;margin:0;max-width:24ch">Isi Piringku untuk yang hidup dengan diabetes</h1>
+      <p style="font-size:14px;line-height:1.6;margin:20px 0 0;color:color-mix(in srgb, var(--color-text) 68%, transparent);text-align:left">6 menit baca · Ditinjau 3 Juni 2026 oleh tim gizi Diabest Friend</p>
 
-  <h2>Kalau porsinya masih terasa kurang</h2>
-  <p>Rasa kurang biasanya datang dari volume, bukan dari kalori. Tambah sayur (direbus, ditumis dengan sedikit minyak, atau dijadikan sup bening) sampai piring benar-benar penuh. Serat dan air di dalamnya mengenyangkan tanpa menaikkan gula darah secepat nasi tambahan.</p>
-  <p>Kebutuhan setiap orang berbeda: tinggi badan, tingkat aktivitas, obat yang diminum, dan kondisi lain seperti gangguan ginjal semuanya mengubah angka yang tepat. Bila Anda sedang menjalani diet khusus dari ahli gizi, panduan itu yang berlaku. Piring ini kerangka umumnya.</p>
+      <p style="font-size:18px;line-height:1.7;margin:34px 0 0;color:var(--color-text)">Menghitung kalori setiap kali makan melelahkan, dan hampir tidak ada yang sanggup melakukannya seumur hidup. Untungnya ada cara yang lebih sederhana dan hampir sama efektifnya: mengatur proporsi piring, bukan angkanya.</p>
 
-  <div class="medical-note">
-    <p class="label">Catatan medis</p>
-    <p>Artikel ini bersifat edukatif dan tidak menggantikan nasihat dokter atau ahli gizi yang menangani Anda. Baca <a href="./terms.html" style="color:inherit">disclaimer lengkap</a>.</p>
+      <h2 style="font-size:26px;line-height:1.25;margin:40px 0 0">Pembagian piringnya</h2>
+      <p style="font-size:17px;line-height:1.7;margin:18px 0 0;color:color-mix(in srgb, var(--color-text) 86%, transparent)">Panduan Isi Piringku dari Kementerian Kesehatan membagi satu piring makan seperti ini:</p>
+      <ul style="font-size:17px;line-height:1.7;margin:20px 0 0;padding-left:24px;color:color-mix(in srgb, var(--color-text) 86%, transparent);display:grid;gap:8px">
+        <li><strong>Setengah piring, sayur dan buah.</strong> Dua bagian sayur, satu bagian buah. Sayurnya diutamakan yang tidak bertepung: bayam, kangkung, buncis, sawi, terong, labu siam.</li>
+        <li><strong>Seperempat piring, lauk protein.</strong> Ikan, ayam tanpa kulit, telur, tempe, tahu, atau kacang-kacangan. Selingkan protein hewani dan nabati dalam sehari.</li>
+        <li><strong>Seperempat piring, karbohidrat.</strong> Nasi, kentang, jagung, ubi, atau sagu. Perhatikan: seperempat, bukan setengah. Ini bagian yang paling sering kebablasan.</li>
+      </ul>
+      <p style="font-size:17px;line-height:1.7;margin:18px 0 0;color:color-mix(in srgb, var(--color-text) 86%, transparent)">Lengkapi dengan air putih (sekitar 8 gelas sehari), aktivitas fisik 30 menit, dan menimbang berat badan secara berkala.</p>
+
+      <div style="background:var(--color-accent-100);border-radius:var(--radius-lg);padding:26px 28px;margin:34px 0 0">
+        <p style="font-family:var(--font-heading);font-weight:400;font-size:19px;line-height:1.3;margin:0;color:var(--color-accent-800);text-align:left">Yang berubah untuk diabetes: urutan dan porsi karbohidratnya.</p>
+        <p style="font-size:16px;line-height:1.65;margin:12px 0 0;color:color-mix(in srgb, var(--color-text) 84%, transparent)">Prinsip piringnya sama untuk semua orang. Tiga penyesuaian kecil membuatnya bekerja lebih baik untuk gula darah: karbohidrat tetap di seperempat piring, buah dimakan utuh (bukan dijus), dan sayur atau protein disantap lebih dulu sebelum nasi.</p>
+      </div>
+
+      <h2 style="font-size:26px;line-height:1.25;margin:44px 0 0">Menerjemahkannya ke piring sungguhan</h2>
+      <p style="font-size:17px;line-height:1.7;margin:18px 0 0;color:color-mix(in srgb, var(--color-text) 86%, transparent)">Masalahnya, makanan Indonesia jarang tersaji terpisah-pisah di satu piring datar. Beberapa penyesuaian praktis:</p>
+      <ol style="font-size:17px;line-height:1.7;margin:20px 0 0;padding-left:24px;color:color-mix(in srgb, var(--color-text) 86%, transparent);display:grid;gap:10px">
+        <li><strong>Nasi satu centong, bukan sesuai selera.</strong> Satu centong munjung setara sekitar dua takaran. Ambil satu, lalu tambah sayur sampai piring terlihat penuh.</li>
+        <li><strong>Untuk makanan berkuah, hitung isinya.</strong> Soto, bakso, atau gado-gado: perkirakan berapa banyak lontong, bihun, atau ketupatnya, itulah bagian karbohidrat Anda.</li>
+        <li><strong>Mi dan nasi tidak berpasangan.</strong> Keduanya karbohidrat. Pilih satu, dan sisanya diisi lauk serta sayur.</li>
+        <li><strong>Gorengan bukan lauk protein.</strong> Tempe goreng masih tempe, tapi bakwan dan risoles lebih dekat ke karbohidrat plus minyak.</li>
+        <li><strong>Buah sebagai penutup, satu porsi.</strong> Satu potong pepaya sedang, satu buah jeruk, atau satu pisang kecil, bukan sepiring rujak.</li>
+      </ol>
+
+      <h2 style="font-size:26px;line-height:1.25;margin:44px 0 0">Kalau porsinya masih terasa kurang</h2>
+      <p style="font-size:17px;line-height:1.7;margin:18px 0 0;color:color-mix(in srgb, var(--color-text) 86%, transparent)">Rasa kurang biasanya datang dari volume, bukan dari kalori. Tambah sayur (direbus, ditumis dengan sedikit minyak, atau dijadikan sup bening) sampai piring benar-benar penuh. Serat dan air di dalamnya mengenyangkan tanpa menaikkan gula darah secepat nasi tambahan.</p>
+      <p style="font-size:17px;line-height:1.7;margin:18px 0 0;color:color-mix(in srgb, var(--color-text) 86%, transparent)">Kebutuhan setiap orang berbeda: tinggi badan, tingkat aktivitas, obat yang diminum, dan kondisi lain seperti gangguan ginjal semuanya mengubah angka yang tepat. Bila Anda sedang menjalani diet khusus dari ahli gizi, panduan itu yang berlaku. Piring ini kerangka umumnya.</p>
+
+      <div style="border:1px solid var(--color-divider);border-radius:var(--radius-lg);padding:26px 28px;margin:40px 0 0">
+        <p style="font-size:13px;line-height:1.4;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0;color:var(--color-accent-700);text-align:left">Catatan medis</p>
+        <p style="font-size:15.5px;line-height:1.65;margin:12px 0 0;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Artikel ini bersifat edukatif dan tidak menggantikan nasihat dokter atau ahli gizi yang menangani Anda. <a href="./terms.html">Baca disclaimer lengkap</a>.</p>
+      </div>
+    </article>
+
+    <aside style="position:sticky;top:96px;display:grid;gap:20px">
+      <div style="background:var(--color-accent-2-100);border-radius:var(--radius-lg);padding:24px 26px">
+        <p style="font-family:var(--font-heading);font-weight:400;font-size:19px;line-height:1.3;margin:0">Susun piring Anda di app</p>
+        <p style="font-size:15px;line-height:1.6;margin:12px 0 0;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Diabest Friend menyusun menu harian dengan proporsi ini dari bahan yang ada di pasar terdekat.</p>
+        <a class="btn btn-primary btn-block" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener" style="margin-top:18px">Gabung waitlist</a>
+      </div>
+      <div>
+        <p style="font-size:13px;line-height:1.4;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:var(--color-accent-700)">Bacaan lanjutan</p>
+        <div style="display:grid;gap:12px">
+          <a href="./artikel-indeks-glikemik.html" style="font-size:15.5px;line-height:1.5;font-weight:600">Indeks glikemik: cara memilih karbohidrat</a>
+          <a href="./artikel-serat.html" style="font-size:15.5px;line-height:1.5;font-weight:600">Serat: 25–30 gram sehari, dari mana saja</a>
+          <a href="./artikel-makan-di-luar.html" style="font-size:15.5px;line-height:1.5;font-weight:600">Makan di luar tanpa merusak rencana</a>
+        </div>
+      </div>
+    </aside>
   </div>
+</main>
 
-  <div class="card">
-    <p style="text-align:left;margin:0 0 4px;font-weight:600">Susun piring Anda di app</p>
-    <p style="text-align:left;color:var(--muted);margin:0">Diabest Friend menyusun menu harian dengan proporsi ini dari bahan yang ada di pasar terdekat.</p>
-    <a class="btn" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener">Gabung waitlist</a>
+<footer style="border-top:1px solid var(--color-divider);margin-top:20px">
+  <div class="container" style="padding-block:clamp(34px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px">
+    <div>
+      <span style="display:flex;align-items:center;gap:10px;font-family:var(--font-heading);font-weight:400;font-size:20px">
+        <img src="./icon.png" alt="" style="width:26px;height:26px;border-radius:8px;display:block" />
+        Diabest Friend
+      </span>
+      <p style="font-size:14.5px;line-height:1.6;margin:14px 0 0;max-width:34ch;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Meal apps untuk siapa saja yang ingin makan lebih sehat, termasuk penyandang diabetes dan prediabetes, beserta keluarga yang mendampingi.</p>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Konten</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="./artikel.html">Semua artikel</a>
+        <a href="./about.html">Tentang kami</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Ketentuan</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="./terms.html">Disclaimer medis</a>
+        <a href="./privacy.html">Kebijakan privasi</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Bantuan</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="mailto:support@diabestfriend.com">support@diabestfriend.com</a>
+      </div>
+    </div>
   </div>
+  <div class="container" style="padding-bottom:32px;font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent)">© 2026 Diabest Friend. Informasi di situs dan aplikasi ini bersifat edukatif dan bukan pengganti nasihat medis profesional.</div>
+</footer>
 
-  <div class="related">
-    <p class="label">Bacaan lanjutan</p>
-    <a href="./artikel-indeks-glikemik.html">Indeks glikemik: cara memilih karbohidrat</a>
-    <a href="./artikel-serat.html">Serat: 25–30 gram sehari, dari mana saja</a>
-    <a href="./artikel-makan-di-luar.html">Makan di luar tanpa merusak rencana</a>
-  </div>
-
-  <footer>© 2026 Diabest Friend. Informasi di situs dan aplikasi ini bersifat edukatif dan bukan pengganti nasihat medis profesional.</footer>
-</div>
 </body>
 </html>

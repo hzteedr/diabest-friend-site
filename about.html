@@ -5,141 +5,118 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tentang Kami · Diabest Friend</title>
 <meta name="description" content="Kenapa Diabest Friend dibuat, dan prinsip yang kami pegang dalam menyusun resep dan artikel.">
+<link rel="stylesheet" href="./styles.css">
 <style>
-  :root {
-    color-scheme: light dark;
-    --bg: #F8F6F0;
-    --text: #1F2A22;
-    --muted: #55604F;
-    --primary: #2E6B47;
-    --accent: #B8863C;
-    --card: #FFFFFF;
-    --border: #E4DFD2;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14181A;
-      --text: #EDEFE9;
-      --muted: #A9B3A4;
-      --primary: #6FBF8E;
-      --accent: #D8A85C;
-      --card: #1C2220;
-      --border: #2C332B;
-    }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-  }
-  .wrap { max-width: 720px; margin: 0 auto; padding: 48px 20px 96px; }
-  p { text-align: justify; text-justify: inter-word; }
-  .backlink { display: inline-block; margin-bottom: 24px; font-size: 0.9rem; color: var(--primary); text-decoration: none; }
-  .backlink:hover { text-decoration: underline; }
-  header { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
-  header img { width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--border); }
-  .pill {
-    display: inline-block;
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--accent);
-    background: color-mix(in srgb, var(--accent) 14%, transparent);
-    border-radius: 999px;
-    padding: 4px 12px;
-    margin-bottom: 14px;
-    font-weight: 600;
-  }
-  h1 { font-size: 1.7rem; margin: 0 0 24px; color: var(--primary); }
-  h2 { font-size: 1.15rem; margin: 32px 0 10px; color: var(--text); }
-  p, li { color: var(--text); font-size: 0.97rem; }
-  .lead { color: var(--muted); font-size: 1.02rem; }
-  ul.principles { list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 18px; }
-  ul.principles li { padding-left: 26px; position: relative; }
-  ul.principles li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 6px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--primary);
-  }
-  ul.principles strong { display: block; color: var(--text); margin-bottom: 3px; }
-  ul.principles span { color: var(--muted); font-size: 0.93rem; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px 26px;
-    margin-top: 40px;
-  }
-  .card h2 { margin-top: 0; }
-  .btn {
-    display: inline-block;
-    background: var(--primary);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.92rem;
-    padding: 11px 20px;
-    border-radius: 10px;
-    margin-top: 14px;
-  }
-  .btn:hover { opacity: 0.88; }
-  footer { margin-top: 48px; font-size: 0.85rem; color: var(--muted); text-align: center; }
-  footer a { color: var(--muted); }
+  a { color: var(--color-accent-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-800); }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  .container { max-width: 1160px; margin: 0 auto; padding-inline: clamp(20px, 5vw, 64px); }
+  p.justify { text-align: justify; text-justify: inter-word; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <a class="backlink" href="./index.html">← Diabest Friend</a>
-  <header>
-    <img src="./icon.png" alt="Diabest Friend logo">
-    <h1 style="margin:0">Tentang Kami</h1>
-  </header>
 
-  <div style="margin-top:32px">
-    <span class="pill">Cerita kami</span>
-    <h1>Dibuat karena satu pertanyaan di ruang tunggu.</h1>
-    <p class="lead">"Jadi besok saya makan apa?" Pertanyaan itu terdengar sederhana, tapi jawabannya jarang tersedia dalam bentuk yang bisa langsung dipakai. Bukan tabel kalori, bukan larangan, melainkan menu yang benar-benar bisa dimasak di rumah.</p>
-    <p>Diabest Friend dibuat untuk mengisi jarak itu: menerjemahkan panduan gizi menjadi keputusan kecil sehari-hari: apa yang dibeli di pasar, seberapa banyak yang ditaruh di piring, dan apa yang perlu dicatat sebelum kontrol berikutnya.</p>
+<nav class="nav" style="padding-inline:max(clamp(20px,5vw,64px), calc((100% - 1160px) / 2 + clamp(20px,5vw,64px)));position:sticky;top:0;z-index:20;background:var(--color-bg)">
+  <a href="./index.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+    <img src="./icon.png" alt="" style="width:30px;height:30px;border-radius:9px;display:block" />
+    Diabest Friend
+  </a>
+  <div style="display:flex;align-items:center;gap:clamp(12px,1.8vw,24px);margin-left:auto">
+    <a href="./artikel.html">Artikel</a>
+    <a href="./about.html" aria-current="page">Tentang</a>
+    <a class="btn btn-primary" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener" style="white-space:nowrap">Gabung waitlist</a>
+  </div>
+</nav>
 
-    <h2>Prinsip yang kami pegang</h2>
-    <ul class="principles">
-      <li>
-        <strong>Mendampingi, bukan menggantikan dokter</strong>
-        <span>Aplikasi ini membantu Anda datang ke ruang periksa dengan catatan yang rapi, bukan menggantikan orang yang memeriksa Anda.</span>
-      </li>
-      <li>
-        <strong>Bahan lokal, harga wajar</strong>
-        <span>Menu disusun dari bahan yang ada di pasar dan warung terdekat. Sehat tidak boleh berarti mahal atau asing.</span>
-      </li>
-      <li>
-        <strong>Tidak menakut-nakuti</strong>
-        <span>Diabetes sudah cukup berat tanpa rasa bersalah tambahan. Kami menulis dengan nada teman, bukan nada pengawas.</span>
-      </li>
-      <li>
-        <strong>Data Anda milik Anda</strong>
-        <span>Catatan kesehatan tersimpan di perangkat Anda sendiri, lihat <a href="./privacy.html">Kebijakan Privasi</a> untuk detailnya.</span>
-      </li>
-    </ul>
+<main class="container" style="padding-block:clamp(36px,5vw,72px) clamp(50px,7vw,90px)">
+  <span style="display:block;font-size:13px;line-height:1.4;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin-bottom:18px">Tentang kami</span>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,300px);gap:clamp(28px,5vw,64px);align-items:start">
+    <div>
+      <h1 style="font-size:clamp(32px,4vw,50px);line-height:1.12;letter-spacing:-0.028em;margin:0;max-width:22ch">Dibuat karena satu pertanyaan di ruang tunggu.</h1>
+      <p class="justify" style="font-size:17.5px;line-height:1.7;max-width:58ch;margin:28px 0 0;color:var(--color-text)">&ldquo;Jadi besok saya makan apa?&rdquo; Pertanyaan itu terdengar sederhana, tapi jawabannya jarang tersedia dalam bentuk yang bisa langsung dipakai. Bukan tabel kalori, bukan larangan, melainkan menu yang benar-benar bisa dimasak di rumah.</p>
+      <p class="justify" style="font-size:17px;line-height:1.7;max-width:58ch;margin:20px 0 0;color:color-mix(in srgb, var(--color-text) 86%, transparent)">Diabest Friend dibuat untuk mengisi jarak itu: menerjemahkan panduan gizi menjadi keputusan kecil sehari-hari, apa yang dibeli di pasar, seberapa banyak yang ditaruh di piring, dan apa yang perlu dicatat sebelum kontrol berikutnya.</p>
 
-    <h2>Bagaimana konten kami ditinjau</h2>
-    <p>Setiap artikel disusun dari panduan kesehatan yang berlaku, lalu ditinjau tenaga kesehatan sebelum tayang. Tanggal tinjauan dicantumkan di bawah judul, dan artikel yang sudah lama dijadwalkan untuk diperiksa ulang. Jika Anda menemukan yang keliru, tulis ke kami, koreksi akan kami cantumkan.</p>
+      <h2 style="font-size:26px;line-height:1.25;margin:48px 0 0">Prinsip yang kami pegang</h2>
+      <div style="display:grid;gap:24px;margin-top:24px">
+        <div style="display:grid;grid-template-columns:18px 1fr;gap:16px;align-items:start">
+          <span style="width:18px;height:18px;border-radius:50%;background:var(--color-accent);margin-top:6px"></span>
+          <div>
+            <h3 style="font-size:20px;line-height:1.3;margin:0">Mendampingi, bukan menggantikan dokter</h3>
+            <p class="justify" style="font-size:16px;line-height:1.65;margin:8px 0 0;max-width:52ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Aplikasi ini membantu Anda datang ke ruang periksa dengan catatan yang rapi, bukan menggantikan orang yang memeriksa Anda.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:18px 1fr;gap:16px;align-items:start">
+          <span style="width:18px;height:18px;border-radius:50%;background:var(--color-accent-2-500);margin-top:6px"></span>
+          <div>
+            <h3 style="font-size:20px;line-height:1.3;margin:0">Bahan lokal, harga wajar</h3>
+            <p class="justify" style="font-size:16px;line-height:1.65;margin:8px 0 0;max-width:52ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Menu disusun dari bahan yang ada di pasar dan warung terdekat. Sehat tidak boleh berarti mahal atau asing.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:18px 1fr;gap:16px;align-items:start">
+          <span style="width:18px;height:18px;border-radius:50%;background:var(--color-accent);margin-top:6px"></span>
+          <div>
+            <h3 style="font-size:20px;line-height:1.3;margin:0">Tidak menakut-nakuti</h3>
+            <p class="justify" style="font-size:16px;line-height:1.65;margin:8px 0 0;max-width:52ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Diabetes sudah cukup berat tanpa rasa bersalah tambahan. Kami menulis dengan nada teman, bukan nada pengawas.</p>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:18px 1fr;gap:16px;align-items:start">
+          <span style="width:18px;height:18px;border-radius:50%;background:var(--color-accent-2-500);margin-top:6px"></span>
+          <div>
+            <h3 style="font-size:20px;line-height:1.3;margin:0">Data Anda milik Anda</h3>
+            <p class="justify" style="font-size:16px;line-height:1.65;margin:8px 0 0;max-width:52ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Semua data yang Anda masukkan tersimpan di perangkat Anda sendiri, tidak dikirim ke mana pun. Lihat <a href="./privacy.html">Kebijakan Privasi</a> untuk detailnya.</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="card">
-      <h2>Ingin ikut menguji?</h2>
-      <p style="text-align:left">Kami membuka kelompok penguji awal untuk pengguna, keluarga pendamping, dan tenaga kesehatan.</p>
-      <a class="btn" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener">Gabung waitlist</a>
+      <h2 style="font-size:26px;line-height:1.25;margin:48px 0 0">Bagaimana konten kami ditinjau</h2>
+      <p class="justify" style="font-size:17px;line-height:1.7;max-width:58ch;margin:18px 0 0;color:color-mix(in srgb, var(--color-text) 86%, transparent)">Setiap artikel disusun dari panduan kesehatan yang berlaku, lalu ditinjau tenaga kesehatan sebelum tayang. Tanggal tinjauan dicantumkan di bawah judul, dan artikel yang sudah lama dijadwalkan untuk diperiksa ulang. Jika Anda menemukan yang keliru, tulis ke kami, koreksi akan kami cantumkan.</p>
+    </div>
+
+    <aside style="display:grid;gap:20px;position:sticky;top:96px">
+      <figure class="washed" style="margin:0;border-radius:calc(1.5 * var(--radius-lg));overflow:hidden;box-shadow:var(--shadow-md)">
+        <img src="./app-id.jpg" alt="Tampilan aplikasi Diabest Friend" style="display:block;width:100%;height:auto" />
+      </figure>
+      <div style="background:var(--color-accent-2-100);border-radius:var(--radius-lg);padding:24px 26px">
+        <p style="font-family:var(--font-heading);font-weight:400;font-size:19px;line-height:1.3;margin:0">Ingin ikut menguji?</p>
+        <p style="font-size:15px;line-height:1.6;margin:12px 0 0;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Kami membuka kelompok penguji awal untuk pengguna, keluarga pendamping, dan tenaga kesehatan.</p>
+        <a class="btn btn-primary btn-block" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener" style="margin-top:18px">Gabung waitlist</a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer style="border-top:1px solid var(--color-divider);margin-top:20px">
+  <div class="container" style="padding-block:clamp(34px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px">
+    <div>
+      <span style="display:flex;align-items:center;gap:10px;font-family:var(--font-heading);font-weight:400;font-size:20px">
+        <img src="./icon.png" alt="" style="width:26px;height:26px;border-radius:8px;display:block" />
+        Diabest Friend
+      </span>
+      <p style="font-size:14.5px;line-height:1.6;margin:14px 0 0;max-width:34ch;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Meal apps untuk siapa saja yang ingin makan lebih sehat, termasuk penyandang diabetes dan prediabetes, beserta keluarga yang mendampingi.</p>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Konten</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="./artikel.html">Semua artikel</a>
+        <a href="./about.html">Tentang kami</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Ketentuan</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="./terms.html">Disclaimer medis</a>
+        <a href="./privacy.html">Kebijakan privasi</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Bantuan</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="mailto:support@diabestfriend.com">support@diabestfriend.com</a>
+      </div>
     </div>
   </div>
+  <div class="container" style="padding-bottom:32px;font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent)">© 2026 Diabest Friend. Informasi di situs dan aplikasi ini bersifat edukatif dan bukan pengganti nasihat medis profesional.</div>
+</footer>
 
-  <footer>© 2026 Diabest Friend. Informasi di situs dan aplikasi ini bersifat edukatif dan bukan pengganti nasihat medis profesional.</footer>
-</div>
 </body>
 </html>
