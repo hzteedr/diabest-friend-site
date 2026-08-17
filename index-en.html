@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diabest Friend</title>
+<meta name="description" content="A diabetes-friendly meal planner: healthy recipes, portion & calorie control, blood-sugar and weight tracking. Coming soon.">
+<link rel="stylesheet" href="./styles.css">
+<style>
+  a { color: var(--color-accent-700); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-800); }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  .container { max-width: 1160px; margin: 0 auto; padding-inline: clamp(20px, 5vw, 64px); }
+</style>
+</head>
+<body>
+
+<nav class="nav" style="padding-inline:max(clamp(20px,5vw,64px), calc((100% - 1160px) / 2 + clamp(20px,5vw,64px)));position:sticky;top:0;z-index:20;background:var(--color-bg)">
+  <a href="./index-en.html" class="nav-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
+    <img src="./icon.png" alt="" style="width:30px;height:30px;border-radius:9px;display:block" />
+    Diabest Friend
+  </a>
+  <div style="display:flex;align-items:center;gap:clamp(12px,1.8vw,24px);margin-left:auto;flex-wrap:wrap;justify-content:flex-end">
+    <a href="./artikel-en.html">Articles</a>
+    <a href="./about-en.html">About</a>
+    <span style="display:inline-flex;background:var(--color-neutral-200);border-radius:999px;padding:3px">
+      <span style="border:0;background:var(--color-accent-2-600);color:#fff;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;display:inline-block">EN</span>
+      <a href="./index.html" style="border:0;background:none;text-decoration:none;cursor:pointer;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">ID</a>
+    </span>
+    <a class="btn btn-primary" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener" style="white-space:nowrap">Join the waitlist</a>
+  </div>
+</nav>
+
+<main>
+  <section style="position:relative;max-width:1160px;margin:0 auto;padding:clamp(36px,6vw,80px) clamp(20px,5vw,64px) 0">
+    <div style="position:absolute;right:0;top:-190px;width:430px;height:430px;border-radius:50%;background:var(--color-accent-2-200);z-index:0;pointer-events:none"></div>
+    <div class="grid-hero" style="position:relative;z-index:1">
+      <div>
+        <span class="tag tag-accent-2" style="margin-bottom:22px;display:inline-block">Meal Apps · coming soon</span>
+        <h1 style="font-size:clamp(36px,4.9vw,62px);line-height:1.08;letter-spacing:-0.028em;margin:0">
+          <span style="display:block">Eat healthy,</span>
+          <span style="display:block">control your sugar,</span>
+          <span style="display:block">live better.</span>
+        </h1>
+        <p style="text-align:justify;font-size:17.5px;line-height:1.65;max-width:50ch;margin:26px 0 0;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Diabest Friend is a meal planner for people living with diabetes or prediabetes: healthy recipes, portion and calorie control, blood-sugar tracking, and weight goals, all in one place, in plain language.</p>
+        <div style="margin-top:30px">
+          <a class="btn btn-primary" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener" style="min-height:40px">Join the waitlist</a>
+        </div>
+        <p style="font-size:13.5px;line-height:1.6;margin:16px 0 0;color:color-mix(in srgb, var(--color-text) 65%, transparent)">We will write once, at launch. No spam, unsubscribe any time.</p>
+        <p style="font-family:var(--font-heading);font-weight:400;font-size:19px;line-height:1.4;margin:34px 0 0;color:var(--color-accent-2-800)">&ldquo;Your best friend for a healthier life, every day.&rdquo;</p>
+      </div>
+      <figure class="washed" style="margin:0;border-radius:calc(2 * var(--radius-lg));overflow:hidden;box-shadow:var(--shadow-lg);justify-self:end;width:min(320px,100%)">
+        <img src="./app-en.jpg" alt="Diabest Friend app welcome screen" style="display:block;width:100%;height:auto" />
+      </figure>
+    </div>
+  </section>
+
+  <section aria-label="Key numbers" style="max-width:1160px;margin:0 auto;padding:clamp(44px,6vw,88px) clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:clamp(16px,2.5vw,32px);justify-items:center">
+    <div style="width:100%;max-width:208px;aspect-ratio:1;border-radius:50%;background:var(--color-accent-100);display:grid;place-content:center;text-align:center;padding:24px;box-sizing:border-box">
+      <p style="font-family:var(--font-heading);font-weight:400;font-size:clamp(26px,2.5vw,34px);line-height:1.15;margin:0;white-space:nowrap;color:var(--color-accent-700)">1 in 10</p>
+      <p style="font-size:12.5px;line-height:1.45;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:12px 0 0;max-width:15ch;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Adults live with diabetes</p>
+    </div>
+    <div style="width:100%;max-width:208px;aspect-ratio:1;border-radius:50%;background:var(--color-accent-2-300);display:grid;place-content:center;text-align:center;padding:24px;box-sizing:border-box;transform:translateY(22px)">
+      <p style="font-family:var(--font-heading);font-weight:400;font-size:clamp(28px,2.8vw,38px);line-height:1.15;margin:0;white-space:nowrap;color:var(--color-accent-2-800)">50 g</p>
+      <p style="font-size:12.5px;line-height:1.45;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:12px 0 0;max-width:15ch;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Daily added-sugar ceiling</p>
+    </div>
+    <div style="width:100%;max-width:208px;aspect-ratio:1;border-radius:50%;background:var(--color-accent-200);display:grid;place-content:center;text-align:center;padding:24px;box-sizing:border-box">
+      <p style="font-family:var(--font-heading);font-weight:400;font-size:clamp(26px,2.5vw,34px);line-height:1.15;margin:0;white-space:nowrap;color:var(--color-accent-700)">150 min</p>
+      <p style="font-size:12.5px;line-height:1.45;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:12px 0 0;max-width:15ch;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Activity per week</p>
+    </div>
+    <div style="width:100%;max-width:208px;aspect-ratio:1;border-radius:50%;background:var(--color-accent-2-100);display:grid;place-content:center;text-align:center;padding:24px;box-sizing:border-box;transform:translateY(22px)">
+      <p style="font-family:var(--font-heading);font-weight:400;font-size:clamp(26px,2.5vw,34px);line-height:1.15;margin:0;white-space:nowrap;color:var(--color-accent-2-700)">25–30 g</p>
+      <p style="font-size:12.5px;line-height:1.45;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:12px 0 0;max-width:15ch;color:color-mix(in srgb, var(--color-text) 72%, transparent)">Fibre a day</p>
+    </div>
+  </section>
+
+  <section class="container" style="padding-block:clamp(30px,4vw,56px)">
+    <span style="display:block;font-size:13px;line-height:1.4;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin-bottom:18px">Inside the app</span>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(20px,3vw,32px)">
+      <div class="card elev-sm">
+        <p class="card-kicker">Healthy recipes</p>
+        <h3 class="card-title">Meals you can shop for at the market</h3>
+        <p class="card-body">Home cooking with local ingredients, built on the balanced-plate rule: half vegetables and fruit, a quarter protein, a quarter carbohydrate.</p>
+      </div>
+      <div class="card elev-sm">
+        <p class="card-kicker">Portion &amp; calorie control</p>
+        <h3 class="card-title">Measure portions without a scale</h3>
+        <p class="card-body">Visual guides: one scoop, one slice, one glass. Then the app estimates the calories and carbohydrate for you.</p>
+      </div>
+      <div class="card elev-sm">
+        <p class="card-kicker">Track blood sugar</p>
+        <h3 class="card-title">A chart you can show your doctor</h3>
+        <p class="card-body">Log fasting and post-meal readings, see the weekly pattern, and bring the summary to your next appointment.</p>
+      </div>
+      <div class="card elev-sm">
+        <p class="card-kicker">Weight control</p>
+        <h3 class="card-title">Sensible targets, not crash diets</h3>
+        <p class="card-body">Track weight and waist with gradual goals. Losing 5–10% of body weight already improves glycaemic control.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" style="padding-block:clamp(30px,4vw,56px)">
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:baseline;justify-content:space-between;margin-bottom:30px">
+      <h2 style="font-size:clamp(28px,3.2vw,40px);line-height:1.15;letter-spacing:-0.028em;margin:0">Featured reading</h2>
+      <a class="btn btn-ghost" href="./artikel-en.html">See all articles</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(20px,3vw,32px)">
+      <a class="card elev-sm" href="./artikel-indeks-glikemik-en.html" style="text-decoration:none;color:inherit">
+        <p class="card-kicker">Nutrition</p>
+        <h3 class="card-title">Glycaemic index: how to choose your carbs</h3>
+        <p class="card-body">Not about giving up rice, about its form, its portion, and what sits beside it on the plate.</p>
+        <p class="card-meta">7 min read</p>
+      </a>
+      <a class="card elev-sm" href="./artikel-label-gizi-en.html" style="text-decoration:none;color:inherit">
+        <p class="card-kicker">Nutrition</p>
+        <h3 class="card-title">Reading labels: where sugar hides</h3>
+        <p class="card-body">Glucose syrup, maltodextrin, fruit-juice concentrate: sugar under other names.</p>
+        <p class="card-meta">5 min read</p>
+      </a>
+      <a class="card elev-sm" href="./artikel-hba1c-en.html" style="text-decoration:none;color:inherit">
+        <p class="card-kicker">Diabetes</p>
+        <h3 class="card-title">HbA1c and fasting glucose, explained</h3>
+        <p class="card-body">One number sums up three months, the other records this morning. You need both.</p>
+        <p class="card-meta">6 min read</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="container" style="padding-block:clamp(30px,4vw,56px) clamp(50px,7vw,90px)">
+    <div style="background:var(--color-accent-2-100);border-radius:calc(2 * var(--radius-lg));padding:clamp(30px,4vw,56px) clamp(24px,4vw,64px)">
+      <h3 style="font-size:clamp(24px,2.6vw,32px);line-height:1.2;margin:0">Be one of the first users</h3>
+      <p style="text-align:justify;font-size:16px;line-height:1.65;max-width:56ch;margin:18px 0 0;color:color-mix(in srgb, var(--color-text) 80%, transparent)">Diabest Friend is in late development. Leave your email and we will tell you when it launches, plus send one weekly meal plan to try in the meantime.</p>
+      <div style="margin-top:26px">
+        <a class="btn btn-primary" href="https://forms.gle/z2fcQjtk7pXNAMps7" target="_blank" rel="noopener" style="min-height:40px">Join the waitlist</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="border-top:1px solid var(--color-divider);margin-top:20px">
+  <div class="container" style="padding-block:clamp(34px,4vw,56px);display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px">
+    <div>
+      <span style="display:flex;align-items:center;gap:10px;font-family:var(--font-heading);font-weight:400;font-size:20px">
+        <img src="./icon.png" alt="" style="width:26px;height:26px;border-radius:8px;display:block" />
+        Diabest Friend
+      </span>
+      <p style="font-size:14.5px;line-height:1.6;margin:14px 0 0;max-width:34ch;color:color-mix(in srgb, var(--color-text) 72%, transparent)">A meal app for anyone who wants to eat healthier, including people living with diabetes and prediabetes, and the family who supports them.</p>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Content</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="./artikel-en.html">All articles</a>
+        <a href="./about-en.html">About us</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Terms</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="./terms.html">Medical disclaimer</a>
+        <a href="./privacy.html">Privacy policy</a>
+      </div>
+    </div>
+    <div>
+      <p style="font-size:13px;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;margin:0 0 14px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Support</p>
+      <div style="display:grid;gap:10px;font-size:15px">
+        <a href="mailto:support@diabestfriend.com">support@diabestfriend.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="padding-bottom:32px;font-size:13px;color:color-mix(in srgb, var(--color-text) 55%, transparent)">© 2026 Diabest Friend. Information on this site and in the app is educational and not a substitute for professional medical advice.</div>
+</footer>
+
+</body>
+</html>
